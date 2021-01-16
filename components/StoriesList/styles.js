@@ -12,9 +12,21 @@ const StoryGrid = styled.ul`
 
 const Story = styled.li`
   background-color: palevioletred;
-  height: 320px;
+  height: 310px;
   text-align: center;
   padding-top: 30%;
+  position: relative;
+  box-shadow: 1px 1px 1px 1px #828080;
+
+  &::before {
+    content: "";
+    height: 99%;
+    box-shadow: 10px 0px 2px 0px black;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 1px;
+  }
 
   > span {
     color: #491d27;
