@@ -23,6 +23,10 @@ const Story = styled.li`
   position: relative;
   box-shadow: 1px 1px 1px 1px #828080;
 
+  &:hover {
+    transform: scale(1.03, 1.03);
+  }
+
   &::before {
     content: "";
     height: 99%;
