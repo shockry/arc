@@ -15,6 +15,7 @@ const Story = styled.li`
   height: 310px;
   text-align: center;
   padding-top: 30%;
+  padding-left: 12px;
   position: relative;
   box-shadow: 1px 1px 1px 1px #828080;
 
