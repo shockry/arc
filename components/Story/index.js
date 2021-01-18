@@ -3,6 +3,7 @@ import { BackButton, Body, StoryContainer, Title } from "./styles";
 
 function Story(props) {
   const { title, body } = props.post;
+
   return (
     <div>
       <Link href="/" passHref>
