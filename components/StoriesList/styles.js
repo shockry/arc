@@ -8,6 +8,10 @@ const StoryGrid = styled.ul`
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   justify-content: center;
+
+  > a {
+    text-decoration: none;
+  }
 `;
 
 const Story = styled.li`
