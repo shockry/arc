@@ -1,4 +1,5 @@
 import StoriesList from "../components/StoriesList";
+import { getAllStories } from "../utils";
 
 function Home(props) {
   const { stories } = props;
@@ -6,36 +7,11 @@ function Home(props) {
   return <StoriesList stories={stories} />;
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
+  const stories = getAllStories(["title", "date", "slug"]);
+
   return {
-    props: {
-      stories: [
-        {
-          title: "First one",
-          slug: "first-one",
-        },
-        {
-          title: "Another one",
-          slug: "another-one",
-        },
-        {
-          title: "We the best music",
-          slug: "we-the-best-music",
-        },
-        {
-          title: "All my friends are heathens",
-          slug: "all-my-friends-are-heathens",
-        },
-        {
-          title: "Take it slow",
-          slug: "take-it-slow",
-        },
-        {
-          title: "Boom Shaka Laka",
-          slug: "boom-shaka-laka",
-        },
-      ],
-    },
+    props: { stories },
   };
 }
 export default Home;

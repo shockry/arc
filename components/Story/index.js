@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BackButton, Body, StoryContainer, Title } from "./styles";
 
 function Story(props) {
-  const { title, body } = props.post;
+  const { title, content } = props.story;
 
   return (
     <div>
@@ -11,8 +11,7 @@ function Story(props) {
       </Link>
       <StoryContainer>
         <Title>{title}</Title>
-        <Body>{body}</Body>
-        <Body>{body}</Body>
+        <Body>{content}</Body>
       </StoryContainer>
     </div>
   );
