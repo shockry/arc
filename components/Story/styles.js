@@ -18,6 +18,16 @@ const Body = styled.article`
   max-width: 90ch;
   margin-top: 2em;
   font-size: 1.3em;
+
+  > blockquote {
+    font-style: italic;
+    color: #6f6f6f;
+  }
+
+  > hr {
+    border-style: solid;
+    margin: 2em auto;
+  }
 `;
 
 const BackButton = styled.a`

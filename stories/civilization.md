@@ -84,7 +84,7 @@ They started pushing the buttons as the beeps instructed.
 
 They hear a rumble then the ground started falling..
 
-_—————————————_
+---
 
 Everything stops. They find themselves in what looks like a very old operations room.
 
@@ -122,7 +122,7 @@ Everyone agreed.
 
 They started operating the pyramid as per instructed, and it started moving to the new earth..
 
-_———————————_
+---
 
 “Wow! That’s so beautiful!” Said Natalie while looking around upon arrival.
 
@@ -132,15 +132,15 @@ _———————————_
 
 Everyone nodded and smiled. A new hope for the human civilization...
 
-_—————————————_
+---
 
 > ...We live in a multiverse, this was our fifty third attempt at building a sustainable civilization, but as you’re here, we know it failed to last. And it means this planet is no longer suitable for living.
 
-_————————————-_
+---
 
 > ...We live in a multiverse, this was our ninety fourth attempt at building a sustainable civilization...
 
-_————————————-_
+---
 
 > We live in a multiverse, this was our two hundred and thirty fourth attempt at building a sustainable civilization...
 
