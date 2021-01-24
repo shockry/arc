@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { BackButton, Body, StoryContainer, Title } from "./styles";
+import { BackButton, Body, StoryContainer, TheEnd, Title } from "./styles";
+import Image from "next/image";
 
 function Story(props) {
   const { title, content } = props.story;
@@ -11,7 +12,13 @@ function Story(props) {
       </Link>
       <StoryContainer>
         <Title>{title}</Title>
-        <Body>{content}</Body>
+        <Body>
+          {content}
+          <TheEnd>
+            <Image src="/arc-logo.svg" alt="logo" width={64} height={64} />{" "}
+            <span>The End</span>
+          </TheEnd>
+        </Body>
       </StoryContainer>
     </div>
   );

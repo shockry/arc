@@ -55,4 +55,11 @@ const BackButton = styled.a`
   margin-top: 10px;
 `;
 
-export { StoryContainer, Title, Body, BackButton };
+const TheEnd = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+`;
+
+export { StoryContainer, Title, Body, BackButton, TheEnd };
