@@ -15,13 +15,13 @@ const StoryGrid = styled.ul`
 `;
 
 const Story = styled.li`
-  background-color: palevioletred;
+  background-color: #6c534e;
   height: 310px;
   text-align: center;
   padding-top: 30%;
   padding-left: 12px;
   position: relative;
-  box-shadow: 1px 1px 1px 1px #828080;
+  box-shadow: 2px 2px 1px 1px #828080;
 
   &:hover {
     transform: scale(1.03, 1.03);
@@ -38,9 +38,9 @@ const Story = styled.li`
   }
 
   > span {
-    color: #491d27;
+    color: #ffc107;
     font-size: 2em;
-    text-shadow: 0px 0.5px 0 rgba(255, 255, 255, 0.5);
+    text-shadow: 0px 0.5px 0 #ffeb3b;
   }
 `;
 
