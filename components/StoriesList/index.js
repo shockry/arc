@@ -7,7 +7,7 @@ function StoriesList(props) {
   return (
     <StoryGrid>
       {stories.map((story) => (
-        <Link href={`/story/${story.slug}`} key={story.slug}>
+        <Link href={`/stories/${story.slug}`} key={story.slug}>
           <a>
             <Story>
               <span title={story.title}>{story.title}</span>
