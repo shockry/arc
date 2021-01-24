@@ -44,4 +44,8 @@ const Story = styled.li`
   }
 `;
 
-export { StoryGrid, Story };
+const Title = styled.h1`
+  margin-left: 20px;
+`;
+
+export { StoryGrid, Story, Title };
