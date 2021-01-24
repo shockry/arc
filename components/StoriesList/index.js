@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Head from "next/head";
 import { Story, StoryGrid, Title } from "./styles";
 
 function StoriesList(props) {
@@ -7,6 +7,9 @@ function StoriesList(props) {
 
   return (
     <div>
+      <Head>
+        <title>Library</title>
+      </Head>
       <Title>Library</Title>
       <StoryGrid>
         {stories.map((story) => (

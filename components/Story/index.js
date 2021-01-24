@@ -1,12 +1,16 @@
 import Link from "next/link";
-import { BackButton, Body, StoryContainer, TheEnd, Title } from "./styles";
 import Image from "next/image";
+import Head from "next/head";
+import { BackButton, Body, StoryContainer, TheEnd, Title } from "./styles";
 
 function Story(props) {
   const { title, content } = props.story;
 
   return (
     <div>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <Link href="/" passHref>
         <BackButton>&#5130;</BackButton>
       </Link>
