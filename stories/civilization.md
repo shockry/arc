@@ -35,7 +35,7 @@ They got in and closed the rock door.
 
 “Are you insane? Do you realize that humanity almost wiped itself off the face of the earth? Signal towers are no more.”
 
-- everybody started checking out their phones. No one has signal
+_everybody started checking out their phones. No one has signal_
 
 “The sound is coming from there. Let’s just see what it is”
 
