@@ -102,7 +102,7 @@ She looks back at them with an open mouth and a shocked look on her face..
 
 “What does it say?!” Asked Natalie in concern
 
-> If you are reading this, you are some of the few people left on this planet. All pyramids on the planet are interconnected and they can detect the their surroundings. They are designed to initiate escape mechanics in disastrous situations.
+> If you are reading this, you are some of the few people left on this planet. All pyramids on the planet are interconnected and they can detect their surroundings. They are designed to initiate escape mechanics in disastrous situations.
 
 > Those few that took them as shelters shall survive, the pyramids are designed to withstand any natural or manmade disaster.
 
