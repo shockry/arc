@@ -38,8 +38,6 @@ const BackButton = styled.a`
   text-decoration: none;
   color: inherit;
   font-size: 1.7em;
-  margin-left: 20px;
-  margin-top: 10px;
 `;
 
 const TheEnd = styled.div`

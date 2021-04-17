@@ -45,7 +45,7 @@ const Story = styled.li`
 `;
 
 const Title = styled.h1`
-  margin-left: 20px;
+  margin: 0;
 `;
 
 export { StoryGrid, Story, Title };

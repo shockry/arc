@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
+import Header from "../Header";
 import { BackButton, Body, StoryContainer, TheEnd, Title } from "./styles";
 
 function Story(props) {
@@ -11,9 +12,11 @@ function Story(props) {
       <Head>
         <title>{title}</title>
       </Head>
-      <Link href="/" passHref>
-        <BackButton>&#5130;</BackButton>
-      </Link>
+      <Header>
+        <Link href="/" passHref>
+          <BackButton>&#5130;</BackButton>
+        </Link>
+      </Header>
       <StoryContainer>
         <Title>{title}</Title>
         <Body>

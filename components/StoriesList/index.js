@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import Header from "../Header";
 import { Story, StoryGrid, Title } from "./styles";
 
 function StoriesList(props) {
@@ -10,7 +11,9 @@ function StoriesList(props) {
       <Head>
         <title>Library</title>
       </Head>
-      <Title>Library</Title>
+      <Header>
+        <Title>Library</Title>
+      </Header>
       <StoryGrid>
         {stories.map((story) => (
           <Link href={`/stories/${story.slug}`} key={story.slug}>
