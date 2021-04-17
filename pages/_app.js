@@ -2,8 +2,14 @@ import { createGlobalStyle } from "styled-components";
 import Head from "next/head";
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --bg-color: #222831;
+    --text-color: #ececec;
+  }
+
   body {
-    background-color: #d6d5b2;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
