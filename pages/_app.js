@@ -1,10 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 import Head from "next/head";
+import { ColorModeProvider } from "../contexts/colorModeContext";
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --bg-color: #222831;
-    --text-color: #ececec;
+    --bg-color: #d6d5b2;
+    --text-color: initial;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #222831;
+      --text-color: #ececec;
+      color-scheme: dark;
+    }
   }
 
   body {
@@ -20,13 +30,13 @@ const GlobalStyle = createGlobalStyle`
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <ColorModeProvider>
       <Head>
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <GlobalStyle />
       <Component {...pageProps} />
-    </>
+    </ColorModeProvider>
   );
 }
 
