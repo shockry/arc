@@ -1,5 +1,5 @@
 import { useColorMode } from "../../contexts/colorModeContext";
-import { Container } from "./styles";
+import { ColorModeButton, Container } from "./styles";
 
 function Header(props) {
   const { children } = props;
@@ -8,11 +8,14 @@ function Header(props) {
   return (
     <Container>
       <div>{children}</div>
-      <button
-        onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
-      >
-        Toggle lights
-      </button>
+      {colorMode && (
+        <ColorModeButton
+          colorMode={colorMode}
+          onClick={() => setColorMode(colorMode === "dark" ? "light" : "dark")}
+        >
+          {colorMode === "dark" ? "☀️" : "🌙"}
+        </ColorModeButton>
+      )}
     </Container>
   );
 }

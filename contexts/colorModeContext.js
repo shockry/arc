@@ -3,10 +3,6 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ColorModeContext = createContext();
 
 function getInitialColorMode() {
-  if (typeof window === "undefined") {
-    return null;
-  }
-
   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     return "dark";
   }
@@ -16,12 +12,13 @@ function getInitialColorMode() {
 
 function ColorModeProvider(props) {
   const { children } = props;
-  const [colorMode, setColorMode] = useState(getInitialColorMode);
+  const [colorMode, setColorMode] = useState(null);
 
   useEffect(() => {
-    if (colorMode === null) {
-      return;
-    }
+    setColorMode(getInitialColorMode());
+  }, []);
+
+  useEffect(() => {
     if (colorMode === "dark") {
       document.documentElement.style.setProperty("--bg-color", "#222831");
       document.documentElement.style.setProperty("--text-color", "#ececec");
