@@ -1,8 +1,20 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 const ColorModeContext = createContext();
 
 function getInitialColorMode() {
+  if (window.localStorage.getItem("prefers-dark")) {
+    return window.localStorage.getItem("prefers-dark") === "true"
+      ? "dark"
+      : "light";
+  }
+
   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     return "dark";
   }
@@ -19,6 +31,10 @@ function ColorModeProvider(props) {
   }, []);
 
   useEffect(() => {
+    if (!colorMode) {
+      return;
+    }
+
     if (colorMode === "dark") {
       document.documentElement.style.setProperty("--bg-color", "#222831");
       document.documentElement.style.setProperty("--text-color", "#ececec");
@@ -46,7 +62,12 @@ function useColorMode() {
 
   const { colorMode, setColorMode } = context;
 
-  return { colorMode, setColorMode };
+  const setColorModePersisted = useCallback((colorMode) => {
+    setColorMode(colorMode);
+    window.localStorage.setItem("prefers-dark", colorMode === "dark");
+  }, []);
+
+  return { colorMode, setColorMode: setColorModePersisted };
 }
 
 export { ColorModeProvider, useColorMode };
