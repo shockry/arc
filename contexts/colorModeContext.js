@@ -5,6 +5,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import { COLORS, COLOR_MODES } from "../constants";
 
 const ColorModeContext = createContext();
 
@@ -24,13 +25,9 @@ function getInitialColorMode() {
 
 function setCSSVariables(colorMode) {
   if (colorMode === "dark") {
-    document.documentElement.style.setProperty("--bg-color", "#222831");
-    document.documentElement.style.setProperty("--text-color", "#ececec");
-    document.documentElement.style.setProperty("color-scheme", "dark");
+    document.body.classList.add("dark");
   } else {
-    document.documentElement.style.setProperty("--bg-color", "#d6d5b2");
-    document.documentElement.style.setProperty("--text-color", "initial");
-    document.documentElement.style.setProperty("color-scheme", "light");
+    document.body.classList.remove("dark");
   }
 }
 
@@ -68,7 +65,7 @@ function useColorMode() {
 
   const setColorModePersisted = useCallback((colorMode) => {
     setColorMode(colorMode);
-    window.localStorage.setItem("prefers-dark", colorMode === "dark");
+    window.localStorage.setItem("prefers-dark", colorMode === COLOR_MODES.dark);
   }, []);
 
   return { colorMode, setColorMode: setColorModePersisted };

@@ -1,23 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 import Head from "next/head";
 import { ColorModeProvider } from "../contexts/colorModeContext";
+import { COLORS } from "../constants";
 
 const GlobalStyle = createGlobalStyle`
-  :root {
-    --bg-color: #d6d5b2;
+  body {
+    --bg-color: ${COLORS.bgLight};
     --text-color: initial;
     color-scheme: light;
-  }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg-color: #222831;
-      --text-color: #ececec;
-      color-scheme: dark;
-    }
-  }
-
-  body {
     background-color: var(--bg-color);
     transition: background-color 0.3s linear;
     color: var(--text-color);
@@ -26,6 +17,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  body.dark {
+    --bg-color: ${COLORS.bgDark};
+    --text-color: ${COLORS.textDark};
+    color-scheme: light;
   }
 `;
 

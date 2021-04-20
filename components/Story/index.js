@@ -2,8 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 import Header from "../Header";
-import { BackButton, Body, StoryContainer, TheEnd, Title } from "./styles";
 import { useColorMode } from "../../contexts/colorModeContext";
+import { COLOR_MODES } from "../../constants";
+import { BackButton, Body, StoryContainer, TheEnd, Title } from "./styles";
 
 function Story(props) {
   const { title, content } = props.story;
@@ -21,7 +22,7 @@ function Story(props) {
       </Header>
       <StoryContainer>
         <Title>{title}</Title>
-        <Body isDarkMode={colorMode === "dark"}>
+        <Body isDarkMode={colorMode === COLOR_MODES.dark}>
           {content}
           <TheEnd>
             <Image src="/arc-logo.svg" alt="logo" width={64} height={64} />{" "}
