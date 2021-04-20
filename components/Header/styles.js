@@ -12,6 +12,7 @@ const ColorModeButton = styled.button`
   width: 50px;
   height: 50px;
   font-size: 2em;
+  line-height: 0;
   padding: 8px;
   cursor: pointer;
   background-color: ${(props) =>
