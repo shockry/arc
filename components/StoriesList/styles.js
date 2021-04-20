@@ -22,6 +22,7 @@ const Story = styled.li`
   padding-left: 12px;
   position: relative;
   box-shadow: 2px 2px 1px 1px #828080;
+  transition: transform 0.1s ease-out;
 
   &:hover {
     transform: scale(1.03, 1.03);
