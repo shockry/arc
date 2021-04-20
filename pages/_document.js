@@ -37,8 +37,6 @@ export default class MyDocument extends Document {
       <Html>
         <Head />
         <body>
-          <Main />
-          <NextScript />
           <script
             dangerouslySetInnerHTML={{
               __html: `(() => {
@@ -48,6 +46,8 @@ export default class MyDocument extends Document {
                   })()`,
             }}
           ></script>
+          <Main />
+          <NextScript />
         </body>
       </Html>
     );
