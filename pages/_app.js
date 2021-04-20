@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: var(--bg-color);
+    transition: background-color 0.3s linear;
     color: var(--text-color);
     margin: 0;
     padding: 0;
