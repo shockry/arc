@@ -28,7 +28,10 @@ const Body = styled.article`
     border: 0;
     height: 1px;
     background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    background-image: ${(props) =>
+      props.isDarkMode
+        ? "linear-gradient(to right, #333, #ccc, #333)"
+        : "linear-gradient(to right, #ccc, #333, #ccc)"};
     margin: 2em auto;
   }
 `;
