@@ -22,6 +22,18 @@ function getInitialColorMode() {
   return "light";
 }
 
+function setCSSVariables(colorMode) {
+  if (colorMode === "dark") {
+    document.documentElement.style.setProperty("--bg-color", "#222831");
+    document.documentElement.style.setProperty("--text-color", "#ececec");
+    document.documentElement.style.setProperty("color-scheme", "dark");
+  } else {
+    document.documentElement.style.setProperty("--bg-color", "#d6d5b2");
+    document.documentElement.style.setProperty("--text-color", "initial");
+    document.documentElement.style.setProperty("color-scheme", "light");
+  }
+}
+
 function ColorModeProvider(props) {
   const { children } = props;
   const [colorMode, setColorMode] = useState(null);
@@ -35,15 +47,7 @@ function ColorModeProvider(props) {
       return;
     }
 
-    if (colorMode === "dark") {
-      document.documentElement.style.setProperty("--bg-color", "#222831");
-      document.documentElement.style.setProperty("--text-color", "#ececec");
-      document.documentElement.style.setProperty("color-scheme", "dark");
-    } else {
-      document.documentElement.style.setProperty("--bg-color", "#d6d5b2");
-      document.documentElement.style.setProperty("--text-color", "initial");
-      document.documentElement.style.setProperty("color-scheme", "light");
-    }
+    setCSSVariables(colorMode);
   }, [colorMode]);
 
   return (
@@ -70,4 +74,9 @@ function useColorMode() {
   return { colorMode, setColorMode: setColorModePersisted };
 }
 
-export { ColorModeProvider, useColorMode };
+export {
+  ColorModeProvider,
+  useColorMode,
+  getInitialColorMode,
+  setCSSVariables,
+};

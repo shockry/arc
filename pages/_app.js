@@ -31,13 +31,15 @@ const GlobalStyle = createGlobalStyle`
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ColorModeProvider>
+    <>
       <Head>
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <GlobalStyle />
-      <Component {...pageProps} />
-    </ColorModeProvider>
+      <ColorModeProvider>
+        <Component {...pageProps} />
+      </ColorModeProvider>
+    </>
   );
 }
 
