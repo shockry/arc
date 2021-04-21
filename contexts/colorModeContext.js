@@ -23,7 +23,7 @@ function getInitialColorMode() {
   return "light";
 }
 
-function setCSSVariables(colorMode) {
+function activateColorMode(colorMode) {
   if (colorMode === "dark") {
     document.body.classList.add("dark");
   } else {
@@ -44,7 +44,7 @@ function ColorModeProvider(props) {
       return;
     }
 
-    setCSSVariables(colorMode);
+    activateColorMode(colorMode);
   }, [colorMode]);
 
   return (
@@ -63,9 +63,12 @@ function useColorMode() {
 
   const { colorMode, setColorMode } = context;
 
-  const setColorModePersisted = useCallback((colorMode) => {
-    setColorMode(colorMode);
-    window.localStorage.setItem("prefers-dark", colorMode === COLOR_MODES.dark);
+  const setColorModePersisted = useCallback((newColorMode) => {
+    setColorMode(newColorMode);
+    window.localStorage.setItem(
+      "prefers-dark",
+      newColorMode === COLOR_MODES.dark
+    );
   }, []);
 
   return { colorMode, setColorMode: setColorModePersisted };
@@ -75,5 +78,5 @@ export {
   ColorModeProvider,
   useColorMode,
   getInitialColorMode,
-  setCSSVariables,
+  activateColorMode,
 };

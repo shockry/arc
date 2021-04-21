@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import {
   getInitialColorMode,
-  setCSSVariables,
+  activateColorMode,
 } from "../contexts/colorModeContext";
 
 export default class MyDocument extends Document {
@@ -41,8 +41,8 @@ export default class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `(() => {
                   ${getInitialColorMode.toString()}
-                  ${setCSSVariables.toString()}
-                  setCSSVariables(getInitialColorMode())
+                  ${activateColorMode.toString()}
+                  activateColorMode(getInitialColorMode())
                   })()`,
             }}
           ></script>
