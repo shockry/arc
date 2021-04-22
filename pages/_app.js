@@ -5,8 +5,11 @@ import { COLORS } from "../constants";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    --bg-color: ${COLORS.bgLight};
+    --bg-color: ${COLORS.light.background};
     --text-color: initial;
+    --dark-mode-button-bg: ${COLORS.light.darkModeButtonBg};
+    --hr-gradient-edge: ${COLORS.light.hrGradientEdge};
+    --hr-gradient-middle: ${COLORS.light.hrGradientMiddle};
     color-scheme: light;
 
     background-color: var(--bg-color);
@@ -20,9 +23,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body.dark {
-    --bg-color: ${COLORS.bgDark};
-    --text-color: ${COLORS.textDark};
-    color-scheme: light;
+    --bg-color: ${COLORS.dark.background};
+    --text-color: ${COLORS.dark.text};
+    --dark-mode-button-bg: ${COLORS.dark.darkModeButtonBg};
+    --hr-gradient-edge: ${COLORS.dark.hrGradientEdge};
+    --hr-gradient-middle: ${COLORS.dark.hrGradientMiddle};
+    color-scheme: dark;
   }
 `;
 

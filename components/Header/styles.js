@@ -15,7 +15,7 @@ const ColorModeButton = styled.button`
   line-height: 0;
   padding: 8px;
   cursor: pointer;
-  background-color: ${(props) => (props.isDarkMode ? "#696969" : "black")};
+  background-color: var(--dark-mode-button-bg);
   border: none;
   border-radius: 50%;
   transition: all 0.6s ease-out;

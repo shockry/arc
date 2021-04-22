@@ -1,7 +1,17 @@
 const COLORS = {
-  bgDark: "#222831",
-  bgLight: "#d6d5b2",
-  textDark: "#ececec",
+  dark: {
+    background: "#222831",
+    text: "#ececec",
+    darkModeButtonBg: "#696969",
+    hrGradientEdge: "#333",
+    hrGradientMiddle: "#ccc",
+  },
+  light: {
+    background: "#d6d5b2",
+    darkModeButtonBg: "#000",
+    hrGradientEdge: "#ccc",
+    hrGradientMiddle: "#333",
+  },
 };
 
 const COLOR_MODES = {
