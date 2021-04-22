@@ -28,7 +28,12 @@ const Body = styled.article`
     border: 0;
     height: 1px;
     background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    background-image: linear-gradient(
+      to right,
+      var(--hr-gradient-edge),
+      var(--hr-gradient-middle),
+      var(--hr-gradient-edge)
+    );
     margin: 2em auto;
   }
 `;
@@ -38,8 +43,6 @@ const BackButton = styled.a`
   text-decoration: none;
   color: inherit;
   font-size: 1.7em;
-  margin-left: 20px;
-  margin-top: 10px;
 `;
 
 const TheEnd = styled.div`

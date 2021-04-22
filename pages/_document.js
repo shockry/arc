@@ -1,5 +1,9 @@
-import Document from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import {
+  getInitialColorMode,
+  activateColorMode,
+} from "../contexts/colorModeContext";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -26,5 +30,26 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head />
+        <body>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(() => {
+                  ${getInitialColorMode.toString()}
+                  ${activateColorMode.toString()}
+                  activateColorMode(getInitialColorMode())
+                  })()`,
+            }}
+          ></script>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
