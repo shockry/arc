@@ -5,7 +5,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { COLORS, COLOR_MODES } from "../constants";
+import { COLOR_MODES } from "../constants";
 
 const ColorModeContext = createContext();
 
